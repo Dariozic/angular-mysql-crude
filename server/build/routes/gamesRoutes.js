@@ -4,15 +4,15 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
-const indexController_1 = __importDefault(require("../controllers/indexController"));
-class IndexRoutes {
+const gamesController_1 = __importDefault(require("../controllers/gamesController"));
+class GamesRoutes {
     constructor() {
         this.router = express_1.Router();
         this.config();
     }
     config() {
-        this.router.get('/', indexController_1.default.index);
+        this.router.get('/', gamesController_1.default.index);
     }
 }
-const indexRoutes = new IndexRoutes();
-exports.default = indexRoutes.router;
+const gamesRoutes = new GamesRoutes();
+exports.default = gamesRoutes.router;
